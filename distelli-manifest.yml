@@ -1,4 +1,4 @@
-tapan/HelloWorldDistelli:
+tapan/SampleDistelli:
 
 Env:
     # CLASSPATH = $(find lib -name '*.jar' | xargs echo | tr ' ' ':')
@@ -45,8 +45,7 @@ Build:
     - fi
 
 PkgInclude:
-    - target/*.jar
-    - lib/*.jar
+    - *
 
 
 PostInstall:
