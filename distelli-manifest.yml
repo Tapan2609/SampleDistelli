@@ -21,8 +21,8 @@ tapan/SampleDistelli:
         # sudo apt-get -y install oracle-java7-installer
         # sudo apt-get -y install oracle-java7-set-default
         # sudo apt-get -y install ant
-        - sudo apt-get -y install maven
-        - sudo apt-get -y install gradle
+        - sudo apt-get -y install maven3
+        # sudo apt-get -y install gradle
 
     Build:
         - echo "Begin Build"
