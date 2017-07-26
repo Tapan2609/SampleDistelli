@@ -22,28 +22,10 @@ tapan/SampleDistelli:
         # sudo apt-get -y install oracle-java7-set-default
         # sudo apt-get -y install ant
         # sudo apt-get -y install maven3
-        - sudo apt-get -y install gradle
+        # sudo apt-get -y install gradle
 
     Build:
-        - echo "Begin Build"
-        - if [[ -f gradlew ]]; then
-        -   ./gradlew assemble
-        - elif [[ -f build.gradle ]]; then
-        -   gradle assemble
-        - elif [[ -f pom.xml ]]; then
-        -   mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
-        - fi
-        - echo "Begin tests"
-        - if [[ -f gradlew ]]; then
-        -   ./gradlew check
-        - elif [[ -f build.gradle ]]; then
-        -   gradle check
-        - elif [[ -f pom.xml ]]; then
-        -   mvn test -B
-        - else
-        -   ant test
-        - fi
-
+        - maven package
     PkgInclude:
         - '/target/*'
 
