@@ -25,7 +25,7 @@ tapan/SampleDistelli:
         # sudo apt-get -y install gradle
 
     Build:
-        - maven package
+        - mvn package
     PkgInclude:
         - '/target/*'
 
